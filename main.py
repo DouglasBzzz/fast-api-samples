@@ -1,3 +1,4 @@
+#testando os recursos do FASTAPI
 from typing import Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -11,7 +12,7 @@ class Item(BaseModel):
 
 @app.get("/")
 def read_root():
-    return {"testing" : "FastAPI!"}
+    return {"testando" : "os recursos do FastAPI!"}
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Optional[str] = None):
